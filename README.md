@@ -8,7 +8,7 @@ A simple software ray tracer. Has an OpenGL rasterizer that allows for the scene
 
 ## Structure
 
-All of the code is located in the src folder. Most of the "important" code is located in scene.cpp, as this is where the ray tracing is performed, and the aforementioned features are implemented. The other files contain other important classes such as the material system, the shader system (for OpenGL rendering), and the bounding volume heirarchies. 
+All of the code is located in the src folder. Most of the "important" code is located in scene.cpp, as this is where the ray tracing is performed, and the aforementioned features are implemented. The other files contain important classes such as the material system, the shader system (for OpenGL rendering), and the bounding volume heirarchies. 
 
 ## Output
 
