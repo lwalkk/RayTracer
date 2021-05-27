@@ -1,0 +1,17 @@
+# Test of Wavefront pumpkin
+
+eye        
+   65.0711   3.7549  38.5838
+    0.0000   0.0000   0.0000
+   -0.3240  -0.0781   0.9428
+  0.5000
+
+light
+  10 10 10
+  1 1 1
+
+light
+  -10 10 -10
+  1 1 1
+
+wavefront pumpkin.obj

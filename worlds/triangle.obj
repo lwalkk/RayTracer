@@ -1,0 +1,22 @@
+# test triangle in wavefront format
+
+transform
+  1 0 0 0
+  0 1 0 0
+  0 0 1 0
+  0 0 0 1
+
+mtllib triangle.mtl
+
+v 1.0 1.0 0.0
+v 1.5 1.0 0.5
+v 1.0 1.5 0.5
+
+vt 0.0 0.0
+vt 1.0 0.0
+vt 0.0 1.0
+
+g triangle
+usemtl green
+f 1/1 2/2 3/3
+

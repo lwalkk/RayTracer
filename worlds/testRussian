@@ -1,0 +1,59 @@
+# A test scene for Russian Roulette
+
+eye        
+   -7.0135   0.5656  11.0382
+    0.0000   0.5000   0.0000
+    0.0000   1.0000   0.0000
+  0.3454
+
+light
+  0 2 0       # position
+  1.5 1.5 1.5 # colour
+
+material
+  white       # name
+  0 0 0       # ambient reflectivity (Ka)
+  .3 .3 .3    # diffuse reflectivity (Kd)
+  .5 .5 .5    # specular reflectivity (Ks)
+  20          # shininess (n)
+  1           # glossiness (g)
+  0 0 0       # emission (Ie)
+  1           # opacity (alpha)
+  -           # texture filename (- means none)
+  -           # bump map filename (- means none)
+
+material
+  red         # name
+  0 0 0       # ambient reflectivity (Ka)
+  .3 0 0      # diffuse reflectivity (Kd)
+  .5 .5 .5    # specular reflectivity (Ks)
+  20          # shininess (n)
+  1           # glossiness (g)
+  0 0 0       # emission (Ie)
+  1           # opacity (alpha)
+  -           # texture filename (- means none)
+  -           # bump map filename (- means none)
+
+triangle
+ -2.5 0 -0.5
+  2.5 0 -0.5
+ -2.5 1 -0.5
+  white
+
+triangle
+ -2.5 1 -0.5
+  2.5 0 -0.5
+  2.5 1 -0.5
+  white
+
+triangle
+ -2.5 1 0.5
+  2.5 0 0.5
+ -2.5 0 0.5
+  red
+
+triangle
+  2.5 1 0.5
+  2.5 0 0.5
+ -2.5 1 0.5
+  red

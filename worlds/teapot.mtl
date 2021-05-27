@@ -1,0 +1,13 @@
+newmtl teapot
+  Ka 0.00 0.00 0.00
+  Kd 0.64 0.64 0.51
+  Ks 0.25 0.25 0.25
+  Ie 0 0 0
+  N  100.0
+  map_Kd ../data/flower.ppm
+
+newmtl teapot2
+  Ka 0.00 0.00 0.00
+  Kd 0.64 0.64 0.51
+  Ks 0.25 0.25 0.25
+  N  100.0

@@ -1,0 +1,91 @@
+# # Test of soft shadows
+
+light
+  3 3 3
+  .5 .5 .5 # colour
+
+eye        
+  0 0 10
+  0 0 0
+  0 1 0
+  0.438861
+
+material
+  white       # name
+  0 0 0       # ambient reflectivity (Ka)
+  1 1 1       # diffuse reflectivity (Kd)
+  0 0 0       # specular reflectivity (Ks)
+  10          # shininess (n)
+  1           # glossiness (g)
+  0 0 0       # emission (Ie)
+  1           # opacity (alpha)
+  -           # texture filename (- means none)
+  -           # bump map filename (- means none)
+
+material
+  red         # name
+  .09 .02 .03 # ambient reflectivity (Ka)
+  .9 .2 .3    # diffuse reflectivity (Kd)
+  0 0 0       # specular reflectivity (Ks)
+  10          # shininess (n)
+  1           # glossiness (g)
+  0 0 0       # emission (Ie)
+  1           # opacity (alpha)
+  -           # texture filename
+  -           # bump map filename (- means none)
+
+material
+  light       # name
+  0 0 0       # ambient reflectivity (Ka)
+  0 0 0       # diffuse reflectivity (Kd)
+  0 0 0       # specular reflectivity (Ks)
+  10          # shininess (n)
+  1           # glossiness (g)
+  .2 .4 .2    # emission (Ie)
+  1           # opacity (alpha)
+  -           # texture filename
+  -           # bump map filename (- means none)
+
+# # floor
+
+triangle
+  -2.0 -2.0 0.0
+   2.0 -2.0 0.0
+   2.0  2.0 0.0
+  white
+
+triangle
+   2.0  2.0 0.0
+  -2.0  2.0 0.0
+  -2.0 -2.0 0.0
+  white
+
+
+# # blocker (back-to-back triangles)
+
+triangle
+  -.940 -.342 1.0
+  0.174 0.985 1.0
+  0.766 -.643 1.0
+  red
+
+triangle
+  0.174 0.985 1.01
+  -.940 -.342 1.01
+  0.766 -.643 1.01
+  red
+
+
+# # light
+
+triangle
+   0.5 -0.5 2.5
+  -0.5 -0.5 2.5
+   0.5  0.5 2.5
+  light
+
+triangle
+  -0.5  0.5 2.5
+   0.5  0.5 2.5
+  -0.5 -0.5 2.5
+  light

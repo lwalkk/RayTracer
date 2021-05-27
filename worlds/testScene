@@ -1,0 +1,144 @@
+# create plane like in testSoft
+# put specular spheres on top of plane
+
+eye
+  -1.92219 -3.30472 6.50516
+   0 0 0.4
+  -0.209645 0.886007 0.413592
+   0.345426
+
+light
+  3 3 3
+  .5 .5 .5 # colour
+
+material
+  red         # name
+  0.1 0 0     # ambient reflectivity (Ka)
+  .7 0 0      # diffuse reflectivity (Kd)
+  .3 .3 .3    # specular reflectivity (Ks)
+  200         # shininess (n)
+  1           # glossiness (g)
+  0 0 0       # emission (Ie)
+  1           # opacity (alpha)
+  -           # texture filename (- means none)
+  -           # bump map filename (- means none)
+  
+  material
+  blue       # name
+  0 0 .1     # ambient reflectivity (Ka)
+  0 0 .7      # diffuse reflectivity (Kd)
+  .3 .3 .3    # specular reflectivity (Ks)
+  200         # shininess (n)
+  1           # glossiness (g)
+  0 0 0       # emission (Ie)
+  1           # opacity (alpha)
+  -           # texture filename (- means none)
+  -           # bump map filename (- means none)
+ 
+material
+  light       # name
+  0 0 0       # ambient reflectivity (Ka)
+  0 0 0       # diffuse reflectivity (Kd)
+  0 0 0       # specular reflectivity (Ks)
+  10          # shininess (n)
+  1           # glossiness (g)
+  .2 .2 .2    # emission (Ie)
+  1           # opacity (alpha)
+  -           # texture filename
+  -           # bump map filename (- means none)
+
+  
+  material
+  green       # name
+  0 .1 0     # ambient reflectivity (Ka)
+  0 .7 0      # diffuse reflectivity (Kd)
+  .3 .3 .3    # specular reflectivity (Ks)
+  200         # shininess (n)
+  1           # glossiness (g)
+  0 0 0       # emission (Ie)
+  1           # opacity (alpha)
+  -           # texture filename (- means none)
+  -           # bump map filename (- means none)
+  
+material
+  white       # name
+  0 0 0       # ambient reflectivity (Ka)
+  0.6 0.6 0.6       # diffuse reflectivity (Kd)
+  0.4 0.4 0.4       # specular reflectivity (Ks)
+  10          # shininess (n)
+  1           # glossiness (g)
+  0 0 0       # emission (Ie)
+  1           # opacity (alpha)
+  -           # texture filename (- means none)
+  -           # bump map filename (- means none)
+  
+ 
+ material
+  blocker         # name
+  .09 .02 .03 # ambient reflectivity (Ka)
+  .9 .2 .3    # diffuse reflectivity (Kd)
+  0 0 0       # specular reflectivity (Ks)
+  10          # shininess (n)
+  1           # glossiness (g)
+  0 0 0       # emission (Ie)
+  1           # opacity (alpha)
+  -           # texture filename
+  -           # bump map filename (- means none)
+
+  
+  sphere
+  0.5           # radius
+  0 0 1       # centre
+  red         # material name
+
+sphere
+  .5           # radius
+  -1 0 .5       # centre
+  green         # material name
+
+sphere
+  .5           # radius
+  1 0 .5       # centre
+  blue        # material name
+
+
+triangle
+  -2.0 -2.0 0.0
+   2.0 -2.0 0.0
+   2.0  2.0 0.0
+  white
+
+triangle
+   2.0  2.0 0.0
+  -2.0  2.0 0.0
+  -2.0 -2.0 0.0
+  white
+ 
+# # blocker (back-to-back triangles)
+
+triangle
+  -.940 -.342 2.0
+  0.174 0.985 2.0
+  0.766 -.643 2.0
+  blocker
+
+triangle
+  0.174 0.985 2.01
+  -.940 -.342 2.01
+  0.766 -.643 2.01
+  blocker
+
+
+# # light
+
+triangle
+   0.5 -0.5 3.5
+  -0.5 -0.5 3.5
+   0.5  0.5 3.5
+  light
+
+triangle
+  -0.5  0.5 3.5
+   0.5  0.5 3.5
+  -0.5 -0.5 3.5
+  light

@@ -1,0 +1,49 @@
+# A simple test scene with a sphere and triangle.  The triangle is
+# green and has a texture map.  Note how the green (Kd = 0 1 0)
+# affects the texture map colours).
+
+eye
+  -1.92219 -3.30472 6.50516
+   0 0 0.4
+  -0.209645 0.886007 0.413592
+   0.345426
+
+light
+  0 0 10      # position
+  1.5 1.5 1.5 # colour
+
+material
+  red         # name
+  0.1 0 0     # ambient reflectivity (Ka)
+  .7 0 0      # diffuse reflectivity (Kd)
+  .3 .3 .3    # specular reflectivity (Ks)
+  200         # shininess (n)
+  1           # glossiness (g)
+  0 0 0       # emission (Ie)
+  1           # opacity (alpha)
+  -           # texture filename (- means none)
+  -           # bump map filename (- means none)
+
+material
+  green       # name
+  .1 .1 .1    # ambient reflectivity (Ka)
+  .8 .8 .8       # diffuse reflectivity (Kd)
+  .1 .1 .1    # specular reflectivity (Ks)
+  200         # shininess (n)
+  1           # glossiness (g)
+  0 0 0       # emission (Ie)
+  1           # opacity (alpha)
+  data/brick.ppm   # texture filename (- means none)
+  -           # bump map filename (- means none)
+
+sphere
+  1           # radius
+  0 0 0       # centre
+  red         # material name
+
+triangle
+  1.0 1.0 0.0 / 0.0 0.0    # v0 (as position/texCoords/normal: both
+  1.5 1.0 0.5 / 1.0 0.0    # v1  texCoords and normal are optional,
+  1.0 1.5 0.5 / 0.0 1.0    # v2  but don't leave a trailing slash!)
+  green                    # material name
+

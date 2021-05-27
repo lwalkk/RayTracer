@@ -1,0 +1,34 @@
+# A simple test scene with a sphere and triangle.  The triangle is
+# green and has a texture map.  Note how the green (Kd = 0 1 0)
+# affects the texture map colours).
+
+eye
+  -2 -1 5     # from
+  .6 .6 .7    # to
+  0 1 0       # up
+  .6          # field of view in y direction, in radians
+
+light
+  0 0 10      # position
+  1 1 1       # colour
+
+material
+  red         # name
+  0.1 0.1 0.1 # ambient reflectivity (Ka)
+  .6 .3 .0    # diffuse reflectivity (Kd)
+  .3 .3 .3    # specular reflectivity (Ks)
+  100         # shininess (n)
+  1           # glossiness (g)
+  0 0 0       # emission (Ie)
+  1           # opacity (alpha)
+  -           # texture filename (- means none)
+  -           # bump map filename (- means none)
+
+sphere
+  1           # radius
+  0 0 0       # centre
+  red         # material name
+
+wavefront
+  triangle.obj
+
